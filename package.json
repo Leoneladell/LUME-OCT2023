@@ -1,0 +1,24 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leoneladell/LUME-OCT2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leoneladell/LUME-OCT2023/issues"
+  },
+  "homepage": "https://github.com/Leoneladell/LUME-OCT2023#readme",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^3.0.1",
+    "npm": "^10.2.1"
+  }
+}
