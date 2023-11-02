@@ -1,0 +1,82 @@
+/*estilos header*/
+header{
+    display: flex;
+    flex-direction: column;
+
+        .encabezado{
+            background-image: linear-gradient(to right, beige,pink);
+            text-align: center;  
+            font-family: "balsamiq sans";
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 3px;
+            font-family: "balsamiq sans";
+            font-size: 1rem;
+            margin-top: 0;  
+        }
+        .enviosgratis{
+            font-size: 1rem;
+            padding-top: 10px;
+}
+        .encabezado1{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-logo{
+            width: 160px;
+            padding-top: 5px;
+        }
+
+        .header-logo-image{
+            width: 160px;
+            padding-top: 5px;
+        }
+
+        .headertop{
+            background-color: white;
+            display: flex;
+            justify-content:flex-end;
+            align-items: flex-end;
+            }
+
+        .headertopuser{
+            padding: 0px;
+            padding-top: 0px;
+            padding-left: 30px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+            margin: 0px;
+            margin-top: 0px;
+            margin-right: 30px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            }
+
+        .headeritem{
+            display: flex;
+            font-family: "balsamiq sans";
+            font-style: none;
+            flex-direction: row;
+            text-align: right;
+            align-items: stretch;
+            color: black;
+            text-decoration: none;
+            text-decoration-line: none;
+            margin-right: 30px;
+            text-shadow: none;
+            text-rendering: none;
+            text-decoration-line: none;
+            }  
+        .userlink{
+            font-family: "balsamiq sans";
+            font-style: none;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            }
+        }

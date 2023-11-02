@@ -1,38 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
-html {
-  font-size: 16px;
-  height: 100%;
-}
-
-body {
-  background-color: white;
-  font-family: "balsamiq sans", "sans-serif";
-  width: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-}
-
-.grid-container {
-  /*width: 900px*/
-  display: flexbox;
-  flex-direction: row;
-}
-
-.enviosgratis {
-  font-size: 1rem;
-  padding-top: 10px;
-}
-
+/*estilos header*/
 header {
   display: flex;
   flex-direction: column;
 }
-header .logo, header .logo-image {
+header .encabezado {
+  background-image: linear-gradient(to right, beige, pink);
+  text-align: center;
+  font-family: "balsamiq sans";
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  font-family: "balsamiq sans";
+  font-size: 1rem;
+  margin-top: 0;
+}
+header .enviosgratis {
+  font-size: 1rem;
+  padding-top: 10px;
+}
+header .encabezado1 {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-logo {
+  width: 160px;
+  padding-top: 5px;
+}
+header .header-logo-image {
   width: 160px;
   padding-top: 5px;
 }
@@ -73,13 +68,7 @@ header .headeritem {
   text-rendering: none;
   text-decoration-line: none;
 }
-
-.encabezado1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.userlink {
+header .userlink {
   font-family: "balsamiq sans";
   font-style: none;
   text-decoration: none;
@@ -87,127 +76,134 @@ header .headeritem {
   display: inline-block;
 }
 
-nav .ul {
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: "balsamiq sans", sans-serif;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.grid-container {
+  /*width: 900px*/
+  display: flexbox;
+  flex-direction: row;
+}
+
+.nav {
   justify-content: center;
   display: inline;
 }
-nav .li {
+.nav ul {
   justify-content: center;
   display: inline;
 }
-nav .item {
+.nav li {
+  justify-content: center;
+  display: inline;
+}
+.nav .nav-item {
   font-family: "balsamiq sans";
   font-size: 20px;
   font-style: none;
   text-transform: initial;
 }
-nav .link {
+.nav .nav-link {
   color: black !important;
 }
-nav .nav-link:hover {
+.nav .nav, .nav .nav-link:hover {
   color: aquamarine !important;
 }
 
-.navidad {
+main .promo {
+  padding: 30px;
+}
+main .section_subtitle {
+  font-family: "balsamiq sans";
+  font-size: 40px;
+  color: black;
+}
+main .section_title {
+  font-family: "balsamiq sans";
+  font-size: 20px;
+  color: black;
+}
+main .navidad {
   padding-top: 100px;
   padding-bottom: 100px;
   display: flex;
   justify-content: center;
 }
-
-.card-title {
-  font-family: "balsamiq sans";
-  color: black;
-  font-size: 30px;
-}
-
-.promo {
-  padding: 30px;
-}
-
-section {
+main .section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 20px;
   gap: 20px;
 }
-section .subtitle {
-  font-family: "balsamiq sans";
-  font-size: 40px;
-  color: black;
-}
-section .title {
-  font-family: "balsamiq sans";
-  font-size: 20px;
-  color: black;
-}
-
-.text-bg-dark {
+main .text-bg-dark {
   display: flex;
   flex-direction: row;
   align-content: space-between;
 }
-
-.card-title2 {
+main .card-title2 {
   color: black;
   font-family: "balsamiq sans";
   font-size: 60px;
 }
-
-.card-title-ingreso {
+main .card-title-ingreso {
   font-family: "balsamiq sans";
   font-size: 20px;
 }
-
-.card-text-ingreso {
+main .card-text-ingreso {
   font-family: "balsamiq sans";
   font-size: 15px;
 }
-
-.ingresos {
+main .ingresos {
   display: flex;
   padding: 100px;
   gap: 20px;
 }
-
-.arrivals {
+main .arrivals {
   padding: 60px;
 }
-
-.section_subtitle2 {
+main .section_subtitle2 {
   font-family: "balsamiq sans";
   font-size: 50px;
 }
-
-.section_title2 {
+main .section_title2 {
   font-family: "balsamiq sans";
   font-size: 40px;
 }
-
-.section3, img {
+main .section3, main img {
   justify-content: center;
   display: flex;
 }
-
-.section_titlepag1 {
+main .section_titlepag1 {
   font-family: "balsamiq sans";
   font-size: 30px;
 }
-
-.sectionpag1 {
+main .sectionpag1 {
   display: flex;
   justify-content: space-evenly;
   padding-top: 50px;
   padding-bottom: 100px;
 }
-
-.todoslosproductos {
+main .todoslosproductos {
   display: flex;
   gap: 20px;
 }
-
-.imagenlume {
+main .imagenlume {
   width: 1200px;
   padding-top: 100px;
   align-content: center;
@@ -215,72 +211,61 @@ section .title {
   display: flex;
   margin-left: 150px;
 }
-
-.text, p {
+main .text, main p {
   font-family: "balsamiq sans";
   font-size: 30px;
   justify-content: center;
 }
-
-.titulopag2 {
+main .titulopag2 {
   justify-content: center;
   padding-top: 50px;
   font-family: "balsamiq sans";
   display: flex;
   font-size: 50px;
 }
-
-.giftcards {
+main .giftcards {
   padding-top: 100px;
   margin-left: 50px;
   margin-right: 50px;
 }
-
-.comprargift {
+main .comprargift {
   font-family: "balsamiq sans";
 }
-
-.pasosgift, .pasos {
+main .pasosgift, main .pasos {
   font-family: "balsamiq sans";
   color: black;
   font-size: 20px;
 }
-
-.titulopag3 {
+main .titulopag3 {
   display: flex;
   font-family: "balsamiq sans";
   justify-content: center;
   padding-top: 50px;
   font-size: 30px;
 }
-
-.ptext {
+main .ptext {
   font-family: "balsamiq sans";
   color: black;
   font-size: 15px;
 }
-
-.image {
+main .image {
   padding-top: 20px;
   padding-bottom: 60px;
   width: 1200px;
   margin-left: 100px;
   margin-right: 100px;
 }
-
-.aclaracion {
+main .aclaracion {
   margin-left: 50px;
   margin-right: 50px;
   font-family: "balsamiq sans";
 }
-
-.canjear {
+main .canjear {
   margin-left: 50px;
   margin-right: 50px;
   font-family: "balsamiq sans";
 }
-
-.textcanjear {
+main .textcanjear {
   margin-left: 50px;
   margin-right: 50px;
   justify-content: center;
@@ -289,24 +274,19 @@ section .title {
   padding-bottom: 100px;
   padding-top: 20px;
 }
-
-.subscription.bg-white {
+main .subscription.bg-white {
   background: none;
   font-family: "balsamiq sans";
 }
-
-.bg-white {
+main .bg-white {
   background-color: #fff !important;
   padding-bottom: 400px;
 }
-
-.subscription.bg-white .subscription-wrapper {
+main .subscription.bg-white .subscription-wrapper {
   background: #fff;
 }
-
-.subscription-wrapper {
+main .subscription-wrapper {
   border-radius: 0% 5% 10% 3%/10% 20% 0% 17%;
-  -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
   transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
   padding: 70px 50px;
   z-index: 1;
@@ -315,51 +295,39 @@ section .title {
   position: absolute;
   top: 100px;
 }
-
-.subscription-wrapper {
+main .subscription-wrapper {
   box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important;
 }
-
-.subscription-content {
-  -webkit-transform: skewY(-1deg);
+main .subscription-content {
   transform: skewY(-1deg);
 }
-
-h3, .h3 {
+main h3, main .h3 {
   font-size: 30px;
 }
-
-.flex-fill {
-  -ms-flex: 1 1 auto !important;
+main .flex-fill {
   flex: 1 1 auto !important;
 }
-
-.subscription.bg-white .form-control {
+main .subscription.bg-white .form-control {
   border: 1px solid #ebebeb !important;
 }
-
-.subscription-wrapper .form-control {
+main .subscription-wrapper .form-control {
   height: 60px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 45px;
 }
-
-.subscription-wrapper .form-control:focus {
+main .subscription-wrapper .form-control:focus {
   background: rgba(255, 255, 255, 0.1);
   outline: 0;
   box-shadow: none;
 }
-
-.btn:not(:disabled):not(.disabled) {
+main .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-
-.btn-primary {
+main .btn-primary {
   border: 0;
   color: #fff;
 }
-
-.btn {
+main .btn {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
@@ -372,8 +340,7 @@ h3, .h3 {
   transition: 0.3s ease-in;
   overflow: hidden;
 }
-
-.btn-primary:after {
+main .btn-primary:after {
   content: "";
   position: absolute;
   top: 0;
@@ -395,20 +362,17 @@ h3, .h3 {
   right: 0;
   background-color: white;
 }
-
-.footer__top {
+.footer .footer__top {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: rgba 0, 0, 0, 0.1;
 }
-
-.footer__top__icon {
+.footer .footer__top__icon {
   width: 60px;
   align-items: center;
   display: inline-block;
 }
-
-.bordered-rounded {
+.footer .bordered-rounded {
   width: 500px;
   display: flex;
   flex-direction: row;
@@ -417,8 +381,7 @@ h3, .h3 {
   padding: 20px;
   margin: 200px;
 }
-
-.text {
+.footer .text {
   display: flex;
   flex-direction: row;
   text-align: justify;
@@ -426,14 +389,12 @@ h3, .h3 {
   margin: 100px;
   font-family: "balsamiq sans";
 }
-
-h1 {
+.footer h1 {
   font-size: 50px;
   padding: 20px;
   color: blueviolet;
 }
-
-dl {
+.footer dl {
   font-family: "balsamiq sans";
   margin: 20px;
   padding: 10px;
@@ -942,6 +903,4 @@ dl {
   .footer {
     grid-area: footer;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
