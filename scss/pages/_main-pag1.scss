@@ -1,0 +1,22 @@
+/*main-pag1*/
+
+main{
+
+.section_titlepag1{
+    font-family: "balsamiq sans";
+    font-size: 30px;
+}
+
+.sectionpag1{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.todoslosproductos{
+    display: flex;
+    gap: 20px;
+
+}
+}

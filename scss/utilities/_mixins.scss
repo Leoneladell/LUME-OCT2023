@@ -1,0 +1,13 @@
+/*mixin con parametros*/
+
+@mixin flex ($flex-direction, $justify-content){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin flex-2 ($flex-direction, $aling-items){
+display: flex;
+flex-direction: $flex-direction;
+align-items: $aling-items;
+}

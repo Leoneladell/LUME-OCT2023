@@ -34,7 +34,7 @@ header{
         }
 
         .headertop{
-            background-color: white;
+            background-color:$background-color_1;
             display: flex;
             justify-content:flex-end;
             align-items: flex-end;
@@ -64,7 +64,7 @@ header{
             flex-direction: row;
             text-align: right;
             align-items: stretch;
-            color: black;
+            color: $color_1;
             text-decoration: none;
             text-decoration-line: none;
             margin-right: 30px;
@@ -76,7 +76,7 @@ header{
             font-family: "balsamiq sans";
             font-style: none;
             text-decoration: none;
-            color: black;
+            color: $color_1;
             display: inline-block;
             }
         }

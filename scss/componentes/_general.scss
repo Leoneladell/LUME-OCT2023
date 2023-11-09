@@ -1,0 +1,21 @@
+/*estilos general de todo el documento*/
+
+html{
+    font-size: 16px;
+	height: 100%;
+
+}
+
+body{
+    background-color:$background-color_1;
+    font-family: "balsamiq sans", sans-serif;
+    width: 100%;
+}
+
+
+
+.grid-container{
+    /*width: 900px*/
+    display:flexbox;
+	flex-direction: row;
+}
