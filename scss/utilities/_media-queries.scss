@@ -1,19 +1,17 @@
-/*media-queries*/
+/*indexresponsive*/
 
- /**RESPONSIVE INDEX**/
-
- @media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas:
         "header header"
         "nav nav"
         "carrousel carrousel"
         "main main"
         "footer footer";
     }
-  
+
     .header{
         grid-area: header;
     }
@@ -42,6 +40,8 @@
 
     .main{
         grid-area: main;
+        max-width: 100%;
+        padding-bottom: 280px;
     }
 
     .ingresos{
@@ -51,9 +51,10 @@
         align-items: center;
     }
 
-    .subscription{
+    .subscription, .container{
         margin-left: 2px;
         margin-right: 100px;
+        
     }
 
     .footer{
@@ -78,22 +79,20 @@
         margin-right: 100px;
         text-align: justify;
     }
-  }
+}
 
-
-
-  @media screen and (max-width: 576px){
+@media screen and (max-width: 320px){
     .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas:
         "header header"
         "nav nav"
         "carrousel carrousel"
         "main main"
         "footer footer";
     }
-  
+
     .header{
         grid-area: header;
         display: flex;
@@ -110,13 +109,16 @@
     .headeritem{
         display: flex;
         flex-direction: row;
-        margin-left: 100px;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .enviosgratis{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 100%;
     }
 
     .nav{
@@ -134,9 +136,6 @@
 
     .main{
         grid-area: main;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 100px;
     }
 
     .navidad{
@@ -144,11 +143,16 @@
         margin-right: 0px;
     }
 
+    
     .section{
         display: flex;
         flex-direction: row;
         justify-content: center;
         
+    }
+
+    .section_subtitle2{
+        font-size: medium;
     }
 
 
@@ -159,6 +163,7 @@
         align-items: center;
     }
 
+
     .footer{
         grid-area: footer;
         display: flex;
@@ -166,27 +171,21 @@
         margin-left: 65px;
         margin-right: 20px;
     }
-
-    .subscription{
-        display:flex;
-        flex-direction: column;
-    }
-
     .copyright{
         margin-left: 10px;
         text-align: center;
+        padding-top: 10px;
     }
-  }
-
+}
 
 
  /**RESPONSIVE PAG 1 PRODUCTOS **/
 
- @media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas:
         "header header"
         "nav nav"
         "carrousel carrousel"
@@ -197,51 +196,6 @@
     .header{
         grid-area: headerr;
     }
-
-
-    .nav{
-        grid-area: navv;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .carrousel{
-        grid-area: carrousel;
-    }
-
-    .main{
-        grid-area: main;
-    }
-
-    .todoslosproductos{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer{
-        grid-area: footer;
-        padding-top: 300px;
-    }
-  }
-
-  @media screen and (max-width: 576px){
-    .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
-        "header header"
-        "nav nav"
-        "carrouse carrousel"
-        "main main"
-        "footer footer";
-    }
-  
-    .header{
-        grid-area: header;
-    }
-
 
     .nav{
         grid-area: nav;
@@ -259,7 +213,6 @@
         grid-area: main;
     }
 
-
     .ingresos{
         display: flex;
         flex-direction: column;
@@ -267,39 +220,95 @@
         align-items: center;
     }
 
+
+    .footer{
+        grid-area: footer;
+        padding-top: 300px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .grid-container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "carrouse carrousel"
+        "main main"
+        "footer footer";
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .nav{
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .carrousel{
+        grid-area: carrousel;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .promo, .container{
+        display:contents;
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 2px;
+    }
+
+    .section_titlepag1{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    
+
     .footer{
         grid-area: footer;
         padding-top: 300px;
         margin-left: 50px;
     }
-  }
+
+    
+}
 
 
-  /**RESPONSIVE PAG 2 SOBRE LUME **/
+/*sobrelume responsive*/
 
-  @media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px 100px 200px 500px 200px;
+        grid-template-areas:
         "header header"
         "nav nav"
         "carrousel carrousel"
         "main main"
         "footer footer";
     }
-  
+    
     .header{
         grid-area: header;
     }
-
+        
     .header-logo{
         margin-left: 30px;
         padding-bottom: 5px;
     }
-
+  
     .headeritem{
-    margin-right: 80px;
+    margin-right: 50px;
     padding-top: 20px;
     }
 
@@ -313,17 +322,10 @@
 
     .carrousel{
         grid-area: carrousel;
-        
     }
 
     .main{
         grid-area: main;
-    }
-
-    .imagenlume{
-        width: 100%;
-        max-width: 500px;
-        justify-content: center;
     }
 
     .text{
@@ -331,97 +333,98 @@
         font-size: 5px;
         font-family: "balsamiq sans";
         justify-content: center;
-        margin-left: 0px;
+        margin-left: 80px;
     }
 
     .footer{
         grid-area: footer;
-        margin-left: 0;
+        justify-content: center;
+        margin-left: 10px;
+        text-align: justify;
+        margin-right: 0px;
     }
-  }
+}
 
-  @media screen and (max-width: 576px){
+
+@media screen and (max-width: 320px){
     .grid-container {
         grid-template-columns: 50% 50%;
         grid-template-rows: 100px 100px 200px 500px 200px;
         grid-template-areas:
-          "header header"
-          "nav nav"
-          "carrousel carrousel"
-          "main main"
-          "footer footer";
-      }
+        "header header"
+        "nav nav"
+        "carrousel carrousel"
+        "main main"
+        "footer footer";
+    }
     
-      .header{
-          grid-area: header;
-      }
-  
-      .header-logo{
-          margin-left: 30px;
-          padding-bottom: 5px;
-      }
-  
-      .headeritem{
-      margin-right: 50px;
-      padding-top: 20px;
-      }
-  
-      .nav{
-          grid-area: nav;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-      }
-  
-      .carrousel{
-          grid-area: carrousel;
-          
-      }
-  
-      .main{
-          grid-area: main;
-          
-      }
-      
-      .imagenlume{
+    .header{
+        grid-area: header;
+    }
+
+    .header-logo{
+        margin-left: auto;
+        padding-bottom: 5px;
+    }
+
+    .headeritem{
+    margin-right: 8px;
+    padding-top: 20px;
+    }
+
+    .nav{
+        grid-area: nav;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-left: 30px;
-      }
+        text-align: center;
+    }
 
-      .text{
-          text-align: justify;
-          font-size: 5px;
-          font-family: "balsamiq sans";
-          justify-content: center;
-          margin-left: 80px;
-          
-      }
-  
-      .footer{
-          grid-area: footer;
-          justify-content: center;
-          margin-left: 10px;
-          text-align: justify;
-          margin-right: 0px;
-      }
-  }
+    .carrousel{
+        grid-area: carrousel;
+    }
 
-  /** RESPONSIVE PAG 3 GIFT CARDS **/
+    .main{
+        grid-area: main;
+    }
 
-  @media screen and (max-width: 768px){
+    .navidad{
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .text, p{
+        text-align: justify;
+        font-size: 20px;
+        font-family: "balsamiq sans";
+        justify-content: center;
+        margin: auto;
+        padding-top: auto;
+    }
+
+    .footer{
+        grid-area: footer;
+        justify-content: center;
+        margin-left: 10px;
+        text-align: justify;
+        margin-right: 0px;
+    }
+}
+
+/** RESPONSIVE PAG 3 GIFT CARDS **/
+
+@media screen and (max-width: 768px){
     .grid-container {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 100px 100px 200px 500px 200px;
-      grid-template-areas:
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas:
         "header header"
         "nav nav"
         "carrouse carrousel"
         "main main"
         "footer footer";
     }
-  
+
     .header{
         grid-area: header;
     }
@@ -451,6 +454,7 @@
 
     .main{
         grid-area: main;
+        padding-bottom: 5px;
     }
 
     .pasosgift{
@@ -465,10 +469,13 @@
     }
     
     .image{
-        width: 600px;;
+        max-width: 500px;
+        width: 100%;
         height: auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .aclaracion{
@@ -486,94 +493,97 @@
     .footer{
         grid-area: footer;
     }
-  }
+}
 
-  @media screen and (max-width: 576px){
+
+@media screen and (max-width: 320px){
     .grid-container {
         grid-template-columns: 50% 50%;
         grid-template-rows: 100px 100px 200px 500px 200px;
         grid-template-areas:
-          "header header"
-          "nav nav"
-          "carrousel carrousel"
-          "main main"
-          "footer footer";
-      }
-    
-      .header{
-          grid-area: header;
-          
-      }
-  
-      .header-logo{
-          margin-left: 5px;
-          padding-bottom: 5px;
-      }
-
-      .header-logo-image{
-        width: 120px;
-      }
-  
-
-      .headertopuser{
-        margin-right: 120px;
-      }
-  
-      .nav{
-          grid-area: nav;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          margin-right: 150px;
-          padding-top: 20px;
-          
-      }
-  
-      .carrousel{
-          grid-area: carrousel;
-          
-      }
-  
-      .main{
-          grid-area: main;
-          
-      }
-  
-      .pasosgift{
-          justify-content: center;
-          text-align: justify;
-          margin-right: 150px;
-          font-size: 20px;
-          margin-right: 20px;
-      }
-  
-      .ptext{
-          font-size: 18px;
-      }
-      
-      .image{
-          width: 600px;;
-          height: auto;
-          margin-left: 20px;
-      }
-  
-      .aclaracion{
-          margin-left: 25px;
-      }
-  
-      .textcanjear{
-          text-align: justify;
-          font-size: 20px;
-          margin-left: 0px;
-          margin-right: 50px;
-      }
-  
-      .footer{
-          grid-area: footer;
-          
-      }
+        "header header"
+        "nav nav"
+        "carrousel carrousel"
+        "main main"
+        "footer footer";
     }
+    
+    .header{
+        grid-area: header;
+    }
+
+    .header-logo{
+        margin-left: auto;
+        padding-bottom: 5px;
+    }
+
+    .header-logo-image{
+        width: 120px;
+    }
+    .headertopuser{
+        max-width: 100%;
+        margin-right: 5px;
+    }
+
+    .headeritem{
+    margin-right: 8px;
+    padding-top: 20px;
+    }
+
+    .nav{
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-right: 150px;
+        padding-top: 20px;
+    }
+
+    .carrousel{
+        grid-area: carrousel;
+    }
+
+    .main{
+        grid-area: main;
+        max-width: 100%;
+        padding-bottom: 80px;
+    }
+
+    .pasosgift{
+        justify-content: center;
+        text-align: justify;
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    .ptext{
+        font-size: 18px;
+    }
+
+    .image{
+        max-width: 100%;
+        width: 300px;;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .aclaracion{
+        margin-left: 25px;
+    }
+
+    .textcanjear{
+        text-align: justify;
+        font-size: 20px;
+        margin-left: 0px;
+        margin-right: 50px;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+    }
+
 
     /**RESPONSIVE PAG 4 PREGUNTAS FRECUENTES **/
 
@@ -582,14 +592,14 @@
             grid-template-columns: 50% 50%;
             grid-template-rows: 100px 100px 200px 500px 200px;
             grid-template-areas:
-              "header header"
-              "nav nav"
-              "carrousel carrousel"
-              "main main"
-              "footer footer";
-          }
+            "header header"
+            "nav nav"
+            "carrousel carrousel"
+            "main main"
+            "footer footer";
+        }
         
-          .header{
+        .header{
             grid-area: header;
         }
     
@@ -615,49 +625,57 @@
         .carrousel{
             grid-area: carrousel;
         }
-      
-          .main{
-              grid-area: main;
-              
-          }
-      
-         dl{
+
+        .main{
+            grid-area: main;
+        }
+
+        dl{
             text-align: justify;
             justify-content: center;
             font-size: 20px;    
         }
-      
-          .footer{
-              grid-area: footer;
-          }
+
+        .footer{
+            grid-area: footer;
+        }
         }
 
-        @media screen and (max-width: 576px){
+@media screen and (max-width: 320px){
             .grid-container {
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 100px 100px 200px 500px 200px;
                 grid-template-areas:
-                  "header header"
-                  "nav nav"
-                  "carrousel carrousel"
-                  "main main"
-                  "footer footer";
-              }
+                "header header"
+                "nav nav"
+                "carrousel carrousel"
+                "main main"
+                "footer footer";
+            }
             
-              .header{
+            .header{
                 grid-area: header;
             }
         
-            .header-logo{
-                margin-left: 30px;
-                padding-bottom: 5px;
-            }
-        
-            .headeritem{
-            display: flex;
-            margin-right: 100px;
-            padding-top: 20px;
-            }
+            
+    .header-logo{
+        margin-left: auto;
+        padding-bottom: 5px;
+    }
+
+    .header-logo-image{
+        width: 120px;
+    }
+
+    .headertopuser{
+        max-width: 100%;
+        margin-right: 5px;
+    }
+
+    .headeritem{
+    margin-right: 8px;
+    padding-top: 20px;
+    }
         
             .nav{
                 grid-area: nav;
@@ -670,20 +688,18 @@
             .carrousel{
                 grid-area: carrousel;
             }
-          
-              .main{
-                  grid-area: main;
-                  
-              }
-          
-             dl{
+
+            .main{
+                grid-area: main;
+            }
+
+            dl{
                 text-align: justify;
                 justify-content: center;
                 font-size: 20px;    
             }
-          
-              .footer{
-                  grid-area: footer;
-              }
+
+            .footer{
+                grid-area: footer;
             }
-    
+            }

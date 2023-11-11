@@ -16,7 +16,8 @@ main{
 
 .todoslosproductos{
     display: flex;
+    flex-direction: row;
+    max-width: 100%;
     gap: 20px;
-
 }
 }

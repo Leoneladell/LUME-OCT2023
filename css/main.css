@@ -238,6 +238,7 @@ main .subscription.bg-white .subscription-wrapper {
 }
 main .subscription-wrapper {
   border-radius: 0% 5% 10% 3%/10% 20% 0% 17%;
+  -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
   transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
   padding: 70px 50px;
   z-index: 1;
@@ -250,12 +251,14 @@ main .subscription-wrapper {
   box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important;
 }
 main .subscription-content {
+  -webkit-transform: skewY(-1deg);
   transform: skewY(-1deg);
 }
 main h3, main .h3 {
   font-size: 30px;
 }
 main .flex-fill {
+  -ms-flex: 1 1 auto !important;
   flex: 1 1 auto !important;
 }
 main .subscription.bg-white .form-control {
@@ -316,6 +319,8 @@ main .sectionpag1 {
 }
 main .todoslosproductos {
   display: flex;
+  flex-direction: row;
+  max-width: 100%;
   gap: 20px;
 }
 
@@ -328,12 +333,10 @@ main .titulopag2 {
   font-size: 50px;
 }
 main .imagenlume {
-  width: 1200px;
-  padding-top: 50px;
-  align-content: center;
-  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
-  margin-left: 100px;
+  justify-content: center;
 }
 main .text {
   display: flex;
@@ -363,11 +366,11 @@ main .ptext {
   font-size: 15px;
 }
 main .image {
-  padding-top: 20px;
-  padding-bottom: 60px;
+  max-width: 100%;
   width: 1200px;
-  margin-left: 100px;
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 main .aclaracion {
   margin-left: 50px;
@@ -414,8 +417,7 @@ main dl {
   padding: 10px;
 }
 
-/*media-queries*/
-/**RESPONSIVE INDEX**/
+/*indexresponsive*/
 @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 50% 50%;
@@ -445,6 +447,8 @@ main dl {
   }
   .main {
     grid-area: main;
+    max-width: 100%;
+    padding-bottom: 280px;
   }
   .ingresos {
     display: flex;
@@ -452,7 +456,7 @@ main dl {
     justify-content: center;
     align-items: center;
   }
-  .subscription {
+  .subscription, .container {
     margin-left: 2px;
     margin-right: 100px;
   }
@@ -476,7 +480,7 @@ main dl {
     text-align: justify;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 320px) {
   .grid-container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px 200px 500px 200px;
@@ -496,12 +500,15 @@ main dl {
   .headeritem {
     display: flex;
     flex-direction: row;
-    margin-left: 100px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
   .enviosgratis {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 100%;
   }
   .nav {
     grid-area: nav;
@@ -516,9 +523,6 @@ main dl {
   }
   .main {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 100px;
   }
   .navidad {
     justify-content: center;
@@ -528,6 +532,9 @@ main dl {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+  .section_subtitle2 {
+    font-size: medium;
   }
   .ingresos {
     display: flex;
@@ -542,13 +549,10 @@ main dl {
     margin-left: 65px;
     margin-right: 20px;
   }
-  .subscription {
-    display: flex;
-    flex-direction: column;
-  }
   .copyright {
     margin-left: 10px;
     text-align: center;
+    padding-top: 10px;
   }
 }
 /**RESPONSIVE PAG 1 PRODUCTOS **/
@@ -562,7 +566,7 @@ main dl {
     grid-area: headerr;
   }
   .nav {
-    grid-area: navv;
+    grid-area: nav;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -574,16 +578,18 @@ main dl {
   .main {
     grid-area: main;
   }
-  .todoslosproductos {
+  .ingresos {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .footer {
     grid-area: footer;
     padding-top: 300px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 320px) {
   .grid-container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px 200px 500px 200px;
@@ -605,11 +611,16 @@ main dl {
   .main {
     grid-area: main;
   }
-  .ingresos {
+  .promo, .container {
+    display: contents;
+    flex-direction: column;
+    max-width: 100%;
+    margin-left: 2px;
+  }
+  .section_titlepag1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 1rem;
   }
   .footer {
     grid-area: footer;
@@ -617,55 +628,8 @@ main dl {
     margin-left: 50px;
   }
 }
-/**RESPONSIVE PAG 2 SOBRE LUME **/
+/*sobrelume responsive*/
 @media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 100px 200px 500px 200px;
-    grid-template-areas: "header header" "nav nav" "carrousel carrousel" "main main" "footer footer";
-  }
-  .header {
-    grid-area: header;
-  }
-  .header-logo {
-    margin-left: 30px;
-    padding-bottom: 5px;
-  }
-  .headeritem {
-    margin-right: 80px;
-    padding-top: 20px;
-  }
-  .nav {
-    grid-area: nav;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .carrousel {
-    grid-area: carrousel;
-  }
-  .main {
-    grid-area: main;
-  }
-  .imagenlume {
-    width: 100%;
-    max-width: 500px;
-    justify-content: center;
-  }
-  .text {
-    text-align: justify;
-    font-size: 5px;
-    font-family: "balsamiq sans";
-    justify-content: center;
-    margin-left: 0px;
-  }
-  .footer {
-    grid-area: footer;
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 576px) {
   .grid-container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px 200px 500px 200px;
@@ -695,17 +659,62 @@ main dl {
   .main {
     grid-area: main;
   }
-  .imagenlume {
-    display: flex;
-    justify-content: center;
-    margin-left: 30px;
-  }
   .text {
     text-align: justify;
     font-size: 5px;
     font-family: "balsamiq sans";
     justify-content: center;
     margin-left: 80px;
+  }
+  .footer {
+    grid-area: footer;
+    justify-content: center;
+    margin-left: 10px;
+    text-align: justify;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 200px 500px 200px;
+    grid-template-areas: "header header" "nav nav" "carrousel carrousel" "main main" "footer footer";
+  }
+  .header {
+    grid-area: header;
+  }
+  .header-logo {
+    margin-left: auto;
+    padding-bottom: 5px;
+  }
+  .headeritem {
+    margin-right: 8px;
+    padding-top: 20px;
+  }
+  .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .carrousel {
+    grid-area: carrousel;
+  }
+  .main {
+    grid-area: main;
+  }
+  .navidad {
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .text, p {
+    text-align: justify;
+    font-size: 20px;
+    font-family: "balsamiq sans";
+    justify-content: center;
+    margin: auto;
+    padding-top: auto;
   }
   .footer {
     grid-area: footer;
@@ -746,6 +755,7 @@ main dl {
   }
   .main {
     grid-area: main;
+    padding-bottom: 5px;
   }
   .pasosgift {
     justify-content: center;
@@ -757,10 +767,13 @@ main dl {
     font-size: 18px;
   }
   .image {
-    width: 600px;
+    max-width: 500px;
+    width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .aclaracion {
     margin-left: 25px;
@@ -776,7 +789,7 @@ main dl {
     grid-area: footer;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 320px) {
   .grid-container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px 200px 500px 200px;
@@ -786,14 +799,19 @@ main dl {
     grid-area: header;
   }
   .header-logo {
-    margin-left: 5px;
+    margin-left: auto;
     padding-bottom: 5px;
   }
   .header-logo-image {
     width: 120px;
   }
   .headertopuser {
-    margin-right: 120px;
+    max-width: 100%;
+    margin-right: 5px;
+  }
+  .headeritem {
+    margin-right: 8px;
+    padding-top: 20px;
   }
   .nav {
     grid-area: nav;
@@ -809,19 +827,21 @@ main dl {
   }
   .main {
     grid-area: main;
+    max-width: 100%;
+    padding-bottom: 80px;
   }
   .pasosgift {
     justify-content: center;
     text-align: justify;
-    margin-right: 150px;
+    max-width: 100%;
     font-size: 20px;
-    margin-right: 20px;
   }
   .ptext {
     font-size: 18px;
   }
   .image {
-    width: 600px;
+    max-width: 100%;
+    width: 300px;
     height: auto;
     margin-left: 20px;
   }
@@ -879,7 +899,7 @@ main dl {
     grid-area: footer;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 320px) {
   .grid-container {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px 200px 500px 200px;
@@ -889,12 +909,18 @@ main dl {
     grid-area: header;
   }
   .header-logo {
-    margin-left: 30px;
+    margin-left: auto;
     padding-bottom: 5px;
   }
+  .header-logo-image {
+    width: 120px;
+  }
+  .headertopuser {
+    max-width: 100%;
+    margin-right: 5px;
+  }
   .headeritem {
-    display: flex;
-    margin-right: 100px;
+    margin-right: 8px;
     padding-top: 20px;
   }
   .nav {
@@ -918,4 +944,6 @@ main dl {
   .footer {
     grid-area: footer;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
